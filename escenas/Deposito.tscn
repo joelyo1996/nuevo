@@ -1,0 +1,960 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://escenas/Deposito.gd" type="Script" id=1]
+[ext_resource path="res://escenas/cajatuerca.tscn" type="PackedScene" id=2]
+[ext_resource path="res://asset/fabrica2.jpg" type="Texture" id=3]
+[ext_resource path="res://asset/cajarnaise.png" type="Texture" id=4]
+[ext_resource path="res://asset/caja.png" type="Texture" id=5]
+[ext_resource path="res://asset/caja2.png" type="Texture" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=7]
+[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://escenas/Position2D.gd" type="Script" id=9]
+[ext_resource path="res://escenas/Position1.gd" type="Script" id=10]
+[ext_resource path="res://escenas/tornillo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://escenas/KinematicBody2D.gd" type="Script" id=12]
+[ext_resource path="res://asset/Stigman.png" type="Texture" id=13]
+[ext_resource path="res://asset/5_Mushroom dance_deposito.ogg" type="AudioStream" id=14]
+[ext_resource path="res://asset/ButomPressSound.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Fuentes/Fuente1.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://asset/CUuadrodeDialogoPARAJUEGOVIEJO.png" type="Texture" id=17]
+[ext_resource path="res://asset/CuadroDeInformacion.png" type="Texture" id=18]
+[ext_resource path="res://asset/ExclamaciónRojo.png" type="Texture" id=19]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=20]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=21]
+[ext_resource path="res://asset/Viejocortadoparajuego.png" type="Texture" id=22]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Nueva animación"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CuadroInfo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KinematicBody2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("texto2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("crono:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Titulo:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("exclamacion:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("exclamacion:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 1.99503 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 234.14, 184.553 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "play"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CuadroInfo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KinematicBody2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("crono:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("crono:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 485.578, 16 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.921569, 1, 0, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Label:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 2, 2.9869 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 0.0117647, 0.854902, 0.988235 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("exclamacion:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Titulo:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("tiempo:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Tuercas:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("tornillos:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("PocicionarTuercas:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.435294 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("pocicionarTornillo:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.490196 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "salir"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("texto2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("crono:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 23.7432, 12.9508 ), Vector2( 548.017, 234.143 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("crono:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("crono:custom_fonts/font:outline_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KinematicBody2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TextureButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Label2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("tiempo:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Tuercas:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("tornillos:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Titulo2:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("exclamacion:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("CuadroInfo2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Titulo3:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 1, 1.99979 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("viejo:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 1, 1.97309 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 321.09, 329.165 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 239.299, 278.868 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 548.358, 10 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 25
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 10, 62.018 )
+
+[sub_resource type="Animation" id=10]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=11]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+
+[sub_resource type="DynamicFont" id=12]
+size = 25
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 40
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 25
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 16 )
+
+[node name="Deposito" type="Node2D" groups=[
+"main",
+]]
+script = ExtResource( 1 )
+npc = ExtResource( 2 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 510.97, 298.099 )
+scale = Vector2( 0.813152, 0.860487 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Nueva animación" = SubResource( 1 )
+anims/play = SubResource( 2 )
+anims/salir = SubResource( 3 )
+anims/stop = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 518.982, -97.7297 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 290.889, -89.3656 )
+texture = ExtResource( 4 )
+
+[node name="PocicionarTuercas" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 140.289, 512.191 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 5 )
+
+[node name="caja" type="Area2D" parent="PocicionarTuercas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PocicionarTuercas/caja"]
+position = Vector2( -79.3119, 74.6465 )
+shape = SubResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 660.837, -104.546 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 811.782, -107.664 )
+texture = ExtResource( 4 )
+
+[node name="pocicionarTornillo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 892.039, 511.118 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
+
+[node name="AreapocicionarTornillo" type="Area2D" parent="pocicionarTornillo"]
+
+[node name="CollisionpocicionarTornillo" type="CollisionShape2D" parent="pocicionarTornillo/AreapocicionarTornillo"]
+shape = SubResource( 6 )
+
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 502.958, 592.882 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="RigidBody2D2" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -16.4856, 74.8096 )
+rotation = 1.5708
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D2"]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="RigidBody2D3" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1046.85, 58.905 )
+rotation = 1.5708
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D3"]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 924.943
+margin_top = 16.2022
+margin_right = 990.943
+margin_bottom = 34.2022
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 37.8288
+margin_top = 13.4833
+margin_right = 103.829
+margin_bottom = 31.4833
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 370.035, -250.443 )
+script = ExtResource( 9 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position2D"]
+
+[node name="Position1" type="Position2D" parent="."]
+position = Vector2( 224.32, -251.697 )
+script = ExtResource( 10 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position1"]
+
+[node name="Position2" type="Position2D" parent="."]
+position = Vector2( 514.447, -243.288 )
+script = ExtResource( 10 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position2"]
+
+[node name="Position3" type="Position2D" parent="."]
+position = Vector2( 653.203, -239.083 )
+script = ExtResource( 10 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position3"]
+
+[node name="Position4" type="Position2D" parent="."]
+position = Vector2( 808.779, -234.878 )
+script = ExtResource( 10 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position4"]
+
+[node name="Position5" type="Position2D" parent="."]
+position = Vector2( 807.272, -326.826 )
+script = ExtResource( 10 )
+npc = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="Position5"]
+
+[node name="Position6" type="Position2D" parent="."]
+position = Vector2( 652.77, -326.826 )
+script = ExtResource( 10 )
+npc = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="Position6"]
+
+[node name="Position7" type="Position2D" parent="."]
+position = Vector2( 509.63, -317.738 )
+script = ExtResource( 10 )
+npc = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="Position7"]
+
+[node name="Position8" type="Position2D" parent="."]
+position = Vector2( 368.761, -308.649 )
+script = ExtResource( 10 )
+npc = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="Position8"]
+
+[node name="Position9" type="Position2D" parent="."]
+position = Vector2( 223.348, -313.194 )
+script = ExtResource( 10 )
+npc = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="Position9"]
+
+[node name="cajatuerca" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1123.69, 214.783 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 523.049, 514.186 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -3.34033, -21.4545 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 13 )
+vframes = 2
+hframes = 4
+
+[node name="Animationpersonaje" type="AnimationPlayer" parent="KinematicBody2D"]
+anims/caminar = SubResource( 10 )
+anims/saltar = SubResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="tiempo" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 387.245
+margin_top = 16.0
+margin_right = 478.245
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 12 )
+text = "Tiempo"
+
+[node name="Tuercas" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 84.069
+margin_top = 11.1345
+margin_right = 198.069
+margin_bottom = 68.1345
+custom_fonts/font = SubResource( 12 )
+text = "Tuercas
+"
+
+[node name="tornillos" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 783.233
+margin_top = 15.0115
+margin_right = 917.233
+margin_bottom = 72.0115
+custom_fonts/font = SubResource( 12 )
+text = "Tornillos
+"
+
+[node name="CuadroInfo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 517.582, 302.853 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 17 )
+
+[node name="CuadroInfo2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 514.002, 299.273 )
+scale = Vector2( 0.734409, 0.625893 )
+texture = ExtResource( 18 )
+
+[node name="texto1" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 202.305
+margin_top = 223.881
+margin_right = 897.305
+margin_bottom = 641.881
+custom_fonts/font = SubResource( 13 )
+text = "Dirige las cajas hacia la 
+izquierda si son de tornillos y 
+ala derecha si son de tuercas.
+tambien puedes saltar con la 
+barra espaciadora "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 197.592
+margin_top = 235.134
+margin_right = 892.592
+margin_bottom = 653.134
+custom_fonts/font = SubResource( 13 )
+text = "Pudiste ordenar las cajas en             Segundos!!
+
+uff, si lo hubiese hecho solo , ¡hubiese tardado el doble!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 255.711
+margin_top = 169.875
+margin_right = 541.711
+margin_bottom = 207.875
+custom_fonts/font = SubResource( 14 )
+text = "¡Cuidado Abajo!"
+
+[node name="Titulo2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 336.763
+margin_top = 176.19
+margin_right = 622.763
+margin_bottom = 214.19
+custom_fonts/font = SubResource( 14 )
+text = "¡BUen trabajo!"
+
+[node name="Titulo3" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 323.079
+margin_top = 327.769
+margin_right = 631.079
+margin_bottom = 365.769
+custom_fonts/font = SubResource( 14 )
+text = "¡Muchas gracias!"
+
+[node name="exclamacion" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 234.14, 184.553 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 19 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 408.146
+margin_top = 352.615
+margin_right = 884.15
+margin_bottom = 766.615
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+
+[node name="crono" type="Label" parent="." groups=[
+"tiempo",
+]]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 198.501
+margin_top = 86.6815
+margin_right = 238.501
+margin_bottom = 113.681
+custom_fonts/font = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="crono"]
+
+[node name="viejo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 161.004, 318.306 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 22 )
+[connection signal="area_entered" from="PocicionarTuercas/caja" to="." method="_on_caja_area_entered"]
+[connection signal="area_entered" from="pocicionarTornillo/AreapocicionarTornillo" to="." method="_on_AreapocicionarTornillo_area_entered"]
+[connection signal="timeout" from="Position2D/Timer" to="Position2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position1/Timer" to="Position1" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position2/Timer" to="Position2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position3/Timer" to="Position3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position4/Timer" to="Position4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position5/Timer" to="Position5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position6/Timer" to="Position6" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position7/Timer" to="Position7" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position8/Timer" to="Position8" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position9/Timer" to="Position9" method="_on_Timer_timeout"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="crono/Timer" to="." method="_on_Timer_timeout"]

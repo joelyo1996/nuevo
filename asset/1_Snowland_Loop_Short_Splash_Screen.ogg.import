@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/1_Snowland_Loop_Short_Splash_Screen.ogg-24ade6380d3a28f0d247d46156d817a9.oggstr"
+
+[deps]
+
+source_file="res://asset/1_Snowland_Loop_Short_Splash_Screen.ogg"
+dest_files=[ "res://.import/1_Snowland_Loop_Short_Splash_Screen.ogg-24ade6380d3a28f0d247d46156d817a9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

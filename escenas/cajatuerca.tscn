@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://escenas/cajatuerca.gd" type="Script" id=1]
+[ext_resource path="res://asset/cajartres.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.302, 64.8117 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 15.7596 )
+
+[node name="cajatuerca" type="RigidBody2D" groups=[
+"cajas",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="arriba" type="Area2D" parent="."]
+position = Vector2( -3.49902, -44.3213 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arriba"]
+position = Vector2( 4.07251, -12.2176 )
+shape = SubResource( 2 )
+
+[node name="abajo" type="Area2D" parent="."]
+position = Vector2( -1.05551, 64.008 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abajo"]
+position = Vector2( 4.07251, -12.2176 )
+shape = SubResource( 2 )
+[connection signal="area_entered" from="arriba" to="." method="_on_arriba_area_entered"]
+[connection signal="area_entered" from="abajo" to="." method="_on_abajo_area_entered"]
